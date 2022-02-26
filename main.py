@@ -10,12 +10,14 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 
 # Use the application default credentials
-cred = credentials.Certificate("./cred.json")
-firebase_admin.initialize_app(cred)
+# cred = credentials.Certificate("./cred.json")
+# firebase_admin.initialize_app(cred)
 
-db = firestore.client()
+# db = firestore.client()
 
-load_dotenv()
+# Needed for local dev
+# load_dotenv()
+
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
