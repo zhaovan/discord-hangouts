@@ -41,7 +41,11 @@ def create_message(name1, name2):
 async def on_message(message):
     if message.author == client.user:
         return
-    
+    if "testing content" in message.content:
+        channel = message.channel
+        await channel.send("up and running!")
+        return
+
     if "make hangouts" in message.content:
         channel = message.channel
         
@@ -112,5 +116,6 @@ async def on_message(message):
 
 
         await channel.send("Completed!")
+        return
 
 client.run(TOKEN)
