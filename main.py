@@ -101,6 +101,7 @@ async def on_message(message):
             message2 = create_message(person2.display_name, person1.display_name)
             print(message1)
             print(message2)
+            await channel.send(person1.name + " " + person2.name)
             await dm_channel1.send(message1)
             await dm_channel2.send(message2)
 
